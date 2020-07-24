@@ -28,7 +28,7 @@
     ostream << __CURRENT_FUNCTION__ << ": ";                                                                           \
     ostream << "Exception of type " << typeid(exception).name( ) << " occurred in destructor of class "                \
             << typeid( *this).name( ) << ":" << std::endl << "    " << exception.what( ) << std::endl;                 \
-    ostream << "Program terminating." << std::endl;                                                                    \
+    ostream << "Program terminating." << std::endl << std::flush;                                                      \
     exit(exit_code);                                                                                                   \
 }                                                                                                                      \
 while (false)
