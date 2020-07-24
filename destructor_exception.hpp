@@ -44,6 +44,6 @@ while (false)
     ostream << __CURRENT_FUNCTION__ << ": ";                                                                           \
     ostream << "Exception of type " << typeid(exception).name( ) << " occurred in destructor of class "                \
             << typeid( *this).name( ) << ":" << std::endl << "    " << exception.what( ) << std::endl;                 \
-    ostream << "An attempt is made to continue executing the destructor." << std::endl;                                \
+    ostream << "An attempt is made to continue executing the destructor." << std::endl << std::flush;                  \
 }                                                                                                                      \
 while (false)
